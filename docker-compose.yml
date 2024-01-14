@@ -1,5 +1,5 @@
 services:
-  web-server-PLZ:
+  web-server-plz:
     build:
       context: .
       dockerfile: Dockerfile
