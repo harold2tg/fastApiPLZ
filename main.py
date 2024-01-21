@@ -19,6 +19,13 @@ def get_movies_id(id:int):
     return next((movie for movie in movies if movie["id"] == id),[])
 
 
+@app.get('/movies', tags=['movies'])
+def get_movies_by_category(category:str):
+    result = []
+    for movie in movies:
+        if movie["category"] == category:
+            result.append(movie)
+    return result
 
 
 
